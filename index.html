@@ -48,11 +48,16 @@
 <a class="btn btn-ghost" href="people.html">Meet the Team</a>
 </div>
 </div>
-<div class="hero-media">
-<img alt="Brain-computer interface experiment with EEG recording" src="https://commons.wikimedia.org/wiki/Special:FilePath/Brain-computer%20interface%20experiment.jpg"/>
+<div aria-label="braiNU research highlights" aria-roledescription="carousel" class="hero-media" tabindex="0">
+<div class="hero-slide is-active"><img alt="Participant using EEG to control a robotic arm" src="hero-bci-robotics.webp"/></div>
+<div class="hero-slide"><img alt="Participant wearing a high-density EEG cap during a decoding experiment" loading="lazy" src="hero-eeg-decoding.webp"/></div>
+<div class="hero-slide"><img alt="Participant using an EEG-guided upper-limb rehabilitation system" loading="lazy" src="hero-neurorehabilitation.webp"/></div>
+<div class="hero-slide"><img alt="Intracranial EEG recordings alongside a cortical activity map" loading="lazy" src="hero-clinical-neuroai.webp"/></div>
+<div class="hero-controls"><button aria-label="Previous slide" class="hero-control hero-prev" type="button">‹</button><button aria-label="Next slide" class="hero-control hero-next" type="button">›</button></div>
+<div aria-label="Choose a slide" class="hero-dots"><button aria-label="Show BCI and Robotics" class="hero-dot is-active" type="button"></button><button aria-label="Show EEG Decoding" class="hero-dot" type="button"></button><button aria-label="Show Neurorehabilitation" class="hero-dot" type="button"></button><button aria-label="Show Clinical NeuroAI" class="hero-dot" type="button"></button></div>
 <div class="hero-card">
-<strong>AI × Neuroscience × Neuroengineering</strong>
-<span>EEG · iEEG · Brain-Computer Interfaces · Epilepsy · Neurorehabilitation · Robotics</span>
+<strong aria-live="polite">BCI &amp; Robotics</strong>
+<span>EEG-driven control for intelligent robotic systems</span>
 </div>
 </div>
 </div>
@@ -101,5 +106,8 @@
 <a class="btn btn-ghost" href="#top">Back to top ↑</a>
 </div>
 </footer>
+<script>
+(()=>{const c=document.querySelector('.hero-media');if(!c)return;const s=[...c.querySelectorAll('.hero-slide')],d=[...c.querySelectorAll('.hero-dot')],title=c.querySelector('.hero-card strong'),text=c.querySelector('.hero-card span'),copy=[['BCI & Robotics','EEG-driven control for intelligent robotic systems'],['EEG Decoding','Turning neural activity into reliable commands'],['Neurorehabilitation','Brain-machine interfaces for assistive movement'],['Clinical NeuroAI','Intracranial EEG analysis and cortical mapping']];let i=0,t,startX=0;const show=n=>{i=(n+s.length)%s.length;s.forEach((x,j)=>x.classList.toggle('is-active',j===i));d.forEach((x,j)=>{x.classList.toggle('is-active',j===i);x.setAttribute('aria-current',j===i?'true':'false')});title.textContent=copy[i][0];text.textContent=copy[i][1]};const stop=()=>clearInterval(t),start=()=>{stop();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>show(i+1),5000)};c.querySelector('.hero-prev').onclick=()=>{show(i-1);start()};c.querySelector('.hero-next').onclick=()=>{show(i+1);start()};d.forEach((x,j)=>x.onclick=()=>{show(j);start()});c.addEventListener('mouseenter',stop);c.addEventListener('mouseleave',start);c.addEventListener('focusin',stop);c.addEventListener('focusout',start);c.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});c.addEventListener('touchstart',e=>startX=e.changedTouches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{const x=e.changedTouches[0].clientX-startX;if(Math.abs(x)>45){show(i+(x<0?1:-1));start()}},{passive:true});show(0);start()})();
+</script>
 </body>
 </html>
