@@ -27,7 +27,7 @@
 <a href="people.html">People</a>
 <a href="teaching.html">Teaching</a>
 <a href="lab-photos.html">Lab Photos</a></div>
-<a class="btn btn-primary nav-cta" href="join.html">Join the Lab →</a>
+<a class="btn btn-primary nav-cta" href="join.html">Opportunities</a>
 </nav>
 </div>
 </div>
@@ -36,15 +36,15 @@
 <div class="container hero-grid">
 <div class="hero-copy">
 <div class="eyebrow"><span class="dot"></span> braiNU · Nazarbayev University</div>
-<h1>Decoding the brain.<br/><span>Building intelligent neurotechnology.</span></h1>
-<p>We develop machine learning and neuroengineering methods to understand neural activity, build robust brain-computer interfaces, and translate neural data into clinically useful and assistive technologies.</p>
+<h1>Research in neural engineering<br/><span>and brain–computer interfaces.</span></h1>
+<p>braiNU is a research group at Nazarbayev University investigating neural signal analysis, machine learning, and brain–computer interfaces, with applications in epilepsy research and neurorehabilitation.</p>
 <div class="hero-meta">
 <strong>School of Computing and Artificial Intelligence</strong>
 <span>•</span>
 <span>Astana, Kazakhstan</span>
 </div>
 <div class="hero-actions">
-<a class="btn btn-primary" href="research.html">Explore Our Research →</a>
+<a class="btn btn-primary" href="research.html">Research areas →</a>
 <a class="btn btn-ghost" href="people.html">Team Members</a>
 </div>
 </div>
@@ -57,7 +57,7 @@
 <div aria-label="Choose a slide" class="hero-dots"><button aria-label="Show BCI and Robotics" class="hero-dot is-active" type="button"></button><button aria-label="Show EEG Decoding" class="hero-dot" type="button"></button><button aria-label="Show Neurorehabilitation" class="hero-dot" type="button"></button><button aria-label="Show Clinical NeuroAI" class="hero-dot" type="button"></button></div>
 <div class="hero-card">
 <strong aria-live="polite">BCI &amp; Robotics</strong>
-<span>EEG-driven control for intelligent robotic systems</span>
+<span>Research on EEG-based control of robotic systems</span>
 </div>
 </div>
 </div>
@@ -65,15 +65,15 @@
 <section class="section section-soft">
 <div class="container mission-grid">
 <div>
-<div class="eyebrow"><span class="dot"></span> Our mission</div>
-<h2>Engineering intelligence at the interface between brains and machines.</h2>
+<div class="eyebrow"><span class="dot"></span> Research focus</div>
+<h2>Neural signals, computational methods, and assistive systems.</h2>
 </div>
 <div>
-<p class="mission-copy">braiNU brings together artificial intelligence, neural engineering, biomedical signal processing, robotics, and neuroscience to decode human brain activity and turn that knowledge into useful clinical and assistive systems.</p>
+<p class="mission-copy">The group studies neural activity using methods from machine learning, neural engineering, biomedical signal processing, robotics, and neuroscience.</p>
 <div class="mission-list">
-<div class="mission-item"><span class="check">✓</span><span>Develop generalizable machine learning methods for EEG, EMG, fNIRS and intracranial EEG.</span></div>
-<div class="mission-item"><span class="check">✓</span><span>Advance brain-computer interfaces that require less subject-specific calibration.</span></div>
-<div class="mission-item"><span class="check">✓</span><span>Translate neural analytics into tools for epilepsy care, rehabilitation and human-machine interaction.</span></div>
+<div class="mission-item"><span class="check">✓</span><span>Methods for EEG, EMG, fNIRS, and intracranial EEG analysis.</span></div>
+<div class="mission-item"><span class="check">✓</span><span>Brain–computer interface paradigms and cross-participant decoding.</span></div>
+<div class="mission-item"><span class="check">✓</span><span>Neural signal analysis for epilepsy research, neurorehabilitation, and human–machine interaction.</span></div>
 </div>
 </div>
 </div>
@@ -99,7 +99,7 @@
 </div>
 </footer>
 <script>
-(()=>{const c=document.querySelector('.hero-media');if(!c)return;const s=[...c.querySelectorAll('.hero-slide')],d=[...c.querySelectorAll('.hero-dot')],title=c.querySelector('.hero-card strong'),text=c.querySelector('.hero-card span'),copy=[['BCI & Robotics','EEG-driven control for intelligent robotic systems'],['EEG Decoding','Turning neural activity into reliable commands'],['Neurorehabilitation','Brain-machine interfaces for assistive movement'],['Clinical NeuroAI','Intracranial EEG analysis and cortical mapping']];let i=0,t,startX=0;const show=n=>{i=(n+s.length)%s.length;s.forEach((x,j)=>x.classList.toggle('is-active',j===i));d.forEach((x,j)=>{x.classList.toggle('is-active',j===i);x.setAttribute('aria-current',j===i?'true':'false')});title.textContent=copy[i][0];text.textContent=copy[i][1]};const stop=()=>clearInterval(t),start=()=>{stop();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>show(i+1),5000)};c.querySelector('.hero-prev').onclick=()=>{show(i-1);start()};c.querySelector('.hero-next').onclick=()=>{show(i+1);start()};d.forEach((x,j)=>x.onclick=()=>{show(j);start()});c.addEventListener('mouseenter',stop);c.addEventListener('mouseleave',start);c.addEventListener('focusin',stop);c.addEventListener('focusout',start);c.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});c.addEventListener('touchstart',e=>startX=e.changedTouches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{const x=e.changedTouches[0].clientX-startX;if(Math.abs(x)>45){show(i+(x<0?1:-1));start()}},{passive:true});show(0);start()})();
+(()=>{const c=document.querySelector('.hero-media');if(!c)return;const s=[...c.querySelectorAll('.hero-slide')],d=[...c.querySelectorAll('.hero-dot')],title=c.querySelector('.hero-card strong'),text=c.querySelector('.hero-card span'),copy=[['BCI & Robotics','Research on EEG-based control of robotic systems'],['EEG Decoding','Methods for decoding neural activity from EEG recordings'],['Neurorehabilitation','Brain–computer interfaces for motor rehabilitation research'],['Clinical NeuroAI','Intracranial EEG analysis and cortical mapping']];let i=0,t,startX=0;const show=n=>{i=(n+s.length)%s.length;s.forEach((x,j)=>x.classList.toggle('is-active',j===i));d.forEach((x,j)=>{x.classList.toggle('is-active',j===i);x.setAttribute('aria-current',j===i?'true':'false')});title.textContent=copy[i][0];text.textContent=copy[i][1]};const stop=()=>clearInterval(t),start=()=>{stop();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)t=setInterval(()=>show(i+1),5000)};c.querySelector('.hero-prev').onclick=()=>{show(i-1);start()};c.querySelector('.hero-next').onclick=()=>{show(i+1);start()};d.forEach((x,j)=>x.onclick=()=>{show(j);start()});c.addEventListener('mouseenter',stop);c.addEventListener('mouseleave',start);c.addEventListener('focusin',stop);c.addEventListener('focusout',start);c.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1)});c.addEventListener('touchstart',e=>startX=e.changedTouches[0].clientX,{passive:true});c.addEventListener('touchend',e=>{const x=e.changedTouches[0].clientX-startX;if(Math.abs(x)>45){show(i+(x<0?1:-1));start()}},{passive:true});show(0);start()})();
 </script>
 </body>
 </html>
