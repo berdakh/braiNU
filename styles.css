@@ -1,19 +1,22 @@
 
     :root {
-      --ink: #10213f;
-      --ink-2: #34435e;
-      --muted: #6e7b90;
-      --line: #dfe6ef;
-      --surface: #f6f8fb;
+      --ink: #17323a;
+      --ink-2: #3d5358;
+      --muted: #58696b;
+      --line: #d7dfd9;
+      --surface: #eef2ed;
       --white: #ffffff;
-      --blue: #175cff;
-      --blue-dark: #0f43c8;
-      --cyan: #18b7c9;
-      --navy: #07162f;
-      --navy-2: #0d2549;
+      --blue: #136f68;
+      --blue-dark: #0e554f;
+      --cyan: #b8edda;
+      --navy: #102b34;
+      --navy-2: #0a2028;
+      --mint: #b8edda;
+      --violet: #a6a1e4;
+      --paper: #f6f7f2;
       --max: 1180px;
       --radius: 22px;
-      --shadow: 0 18px 55px rgba(17, 39, 77, 0.10);
+      --shadow: 0 18px 55px rgba(16, 43, 52, .10);
     }
 
     * { box-sizing: border-box; }
@@ -380,3 +383,55 @@ a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 5px; }
 .project-mini .project-diagram {padding:12px;}
 .project-diagram a {display:block;}
 @media(max-width:680px){.project-list{grid-template-columns:1fr;}}
+
+
+/* Onset-inspired visual system */
+body { background: var(--paper); }
+.nav-wrap { background: rgba(246,247,242,.93); border-bottom-color: var(--line); }
+.brand-mark { background: linear-gradient(145deg, var(--teal, #136f68), #102b34); box-shadow: 0 8px 20px rgba(19,111,104,.20); }
+.nav-links { color: #355057; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--blue); }
+.btn { border-radius: 7px; }
+.btn-primary { background: var(--blue); box-shadow: 0 10px 26px rgba(19,111,104,.18); }
+.btn-primary:hover { background: var(--blue-dark); }
+.btn-ghost { background: transparent; border-color: #b9c9c1; }
+.btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
+.eyebrow { color: var(--blue); letter-spacing: .15em; }
+.dot { background: var(--violet); }
+.section-soft, .research-video, .contact-card { background: #edf3ee; }
+.section-dark { background: var(--navy); }
+.hero h1 span, .research-card .num, .course-code, .pub-year, .pub-link, .paper-link, .year-navigation a { color: var(--blue); }
+.hero-media { background: var(--navy); border-radius: 22px; }
+.hero-slide img { background: var(--navy); }
+.hero-media::after { background: linear-gradient(180deg, rgba(10,32,40,.01), rgba(10,32,40,.70)); }
+.hero-card, .hero-control { background: rgba(10,32,40,.78); }
+.hero-control:hover, .hero-control:focus-visible { background: var(--blue); }
+.tag { background: #dff4e8; color: #23564c; }
+.check { color: var(--blue); background: #dff4e8; }
+.research-card, .project-feature, .project-mini, .course, .person, .member-card, .lab-photo { background: var(--white); border-color: var(--line); }
+.research-card { border-radius: 12px; }
+.research-card:hover { border-color: #8fc8b6; box-shadow: var(--shadow); }
+.arrow { color: var(--blue); border-color: var(--line); }
+.project-feature { border-radius: 12px; }
+.project-mini { border-radius: 12px; }
+.course { border-radius: 12px; }
+.member-badge.head { background:#dff4e8;color:#23564c; }
+.member-badge.graduate { background:#e7e5fb;color:#4b477e; }
+.member-badge.alumni { background:#dceef0;color:#275b62; }
+.notion-note { background:#e5f3ec; border-color:#c4dfd1; color:#28544d; }
+footer { background: #edf3ee; }
+a:focus-visible { outline-color: var(--violet); }
+
+/* Open research and teaching resources */
+.resource-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+.resource-card { display:flex; flex-direction:column; gap:16px; min-height:250px; padding:30px; border:1px solid var(--line); border-radius:12px; background:var(--white); }
+.resource-card--featured { background:var(--navy); border-color:var(--navy); }
+.resource-card--featured h3, .resource-card--featured p, .resource-card--featured .resource-meta { color:white; }
+.resource-card--featured .resource-label { color:var(--mint); }
+.resource-label { color:var(--blue); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.resource-card h3 { font-size:25px; }
+.resource-card p { font-size:15px; }
+.resource-actions { margin-top:auto; display:flex; flex-wrap:wrap; gap:10px; }
+.resource-card--featured .btn-ghost { border-color:rgba(255,255,255,.42); color:white; }
+.resource-meta { color:var(--muted); font-size:13px; }
+@media(max-width:680px){ .resource-grid{grid-template-columns:1fr;} }
